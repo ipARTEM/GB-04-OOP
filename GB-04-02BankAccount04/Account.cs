@@ -96,6 +96,49 @@ namespace GB_04_02BankAccount04
             return counter++;
         }
 
-        
+        public void FullInfo()
+        {
+            Console.WriteLine($"Тип счёта: {_typeAccount}, Номер счёта: {_number}, Баланс: {_balance}");
+        }
+
+        /// <summary>
+        /// Положить на счет
+        /// </summary>
+        /// <param name="number">Номер счёта</param>
+        /// <param name="put">Положить сумму</param>
+        public void DepositMoney(int number, decimal put )
+        {
+            if (number == _number)
+            {
+                _balance = _balance + put;
+                Console.WriteLine($"Счёт пополнен на: {put}");
+              
+            }
+
+        }
+
+        /// <summary>
+        /// Снять со счета
+        /// </summary>
+        /// <param name="number">Номер счёта</param>
+        /// <param name="take">Снятия сумму</param>
+        public void WithdrawMoney( int number, decimal take)
+        {
+            if (number==_number)
+            {
+                if (_balance>=take)
+                {
+                    _balance = _balance - take;
+
+                    Console.WriteLine($"Со счёта снята на: {take}");
+                }
+                else
+                    Console.WriteLine($"На счету недостаточно средств. Баланс: {_balance}; Сумма для снятия: {take};");
+
+            }
+        }
+
+
+
     }
 }
