@@ -121,7 +121,7 @@ namespace GB_04_02BankAccount04
         /// Снять со счета
         /// </summary>
         /// <param name="number">Номер счёта</param>
-        /// <param name="take">Снятия сумму</param>
+        /// <param name="take">Снять сумму</param>
         public void WithdrawMoney( int number, decimal take)
         {
             if (number==_number)
