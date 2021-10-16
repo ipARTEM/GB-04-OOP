@@ -150,14 +150,14 @@ namespace GB_04_03BankAccount01
                 _balance =_balance + take;
                 moneyFrom._balance = moneyFrom._balance - take;
                 Console.WriteLine($"На счёт: {_number}; Зачислена сумма {take}; Остаток: {_balance};");
-                Console.WriteLine($"Со счёта: {moneyFrom._balance}; Списана сумма: {take}; Остаток: {_balance};");
+                Console.WriteLine($"Со счёта: {moneyFrom._number}; Списана сумма: {take}; Остаток: {moneyFrom._balance};");
                 
             }
-
-
+            else
+            {
+                Console.WriteLine($"Недостаточно средств на счёте: {moneyFrom._number}, для списания суммы: {take}");
+                    
+            }
         }
-
-
-
     }
 }

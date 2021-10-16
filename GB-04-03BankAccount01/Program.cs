@@ -7,7 +7,7 @@ namespace GB_04_03BankAccount01
     {
         static void Main(string[] args)
         {
-            List<Account> listAccount = new List<Account>();
+            List<Account> listAccount = new ();
 
             Account account1 = new Account(100, TypeOfBankAccount.DEPOSIT);
             Account account2 = new Account(99, TypeOfBankAccount.DEBIT);
@@ -24,6 +24,8 @@ namespace GB_04_03BankAccount01
                 item.FullInfo();
             }
 
+            Console.WriteLine();
+
             string exit;
             do
             {
@@ -33,9 +35,10 @@ namespace GB_04_03BankAccount01
                 exit= exit.ToLower();
 
                 
-                int _fromTheAccount=0;
-                bool _isAccountFound = false ;
-                decimal _take;
+                int _fromTheAccount=1;
+                bool _isAccountFound = true ;
+                bool _isTake=true;
+                decimal _take=0;
 
 
 
@@ -55,9 +58,7 @@ namespace GB_04_03BankAccount01
                                 {
                                     if (item.Number == _fromTheAccount)
                                     {
-                                             
-
-                                        _isAccountFound = true;
+                                        _isAccountFound = false;
                                         break;
                                     }
                                 }
@@ -72,30 +73,183 @@ namespace GB_04_03BankAccount01
 
                         do
                         {
-
                             Console.WriteLine("Выберете сумму списания денег:");
 
                             try
                             {
+                                _take = Convert.ToDecimal(Console.ReadLine());
+                                _isTake = false;
 
                             }
                             catch (Exception)
                             {
 
-                                throw;
+                                Console.WriteLine("Некорректная сумма списания!");
                             }
 
-                        } while (true);
+                        } while (_isTake);
 
 
                         account1.MoneyTransfer(listAccount[_fromTheAccount-1], _take);
                         break;
 
+
+                    case "2":
+
+                        Console.WriteLine("Выбран текущий счёт № 2.");
+                        do
+                        {
+                            Console.WriteLine("Выберете счёт с которого будут переведены деньги:");
+
+                            try
+                            {
+                                _fromTheAccount = Convert.ToInt32(Console.ReadLine());
+                                foreach (var item in listAccount)
+                                {
+                                    if (item.Number == _fromTheAccount)
+                                    {
+                                        _isAccountFound = false;
+                                        break;
+                                    }
+                                }
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Не корректный номер счёта");
+                            }
+
+                        } while (_isAccountFound);
+
+
+                        do
+                        {
+                            Console.WriteLine("Выберете сумму списания денег:");
+
+                            try
+                            {
+                                _take = Convert.ToDecimal(Console.ReadLine());
+                                _isTake = false;
+
+                            }
+                            catch (Exception)
+                            {
+
+                                Console.WriteLine("Некорректная сумма списания!");
+
+                            }
+
+                        } while (_isTake);
+
+
+                        
+                        account2.MoneyTransfer(listAccount[_fromTheAccount-1], _take);
+                        break;
+
+
+                    case "3":
+
+                        Console.WriteLine("Выбран текущий счёт № 3.");
+                        do
+                        {
+                            Console.WriteLine("Выберете счёт с которого будут переведены деньги:");
+
+                            try
+                            {
+                                _fromTheAccount = Convert.ToInt32(Console.ReadLine());
+                                foreach (var item in listAccount)
+                                {
+                                    if (item.Number == _fromTheAccount)
+                                    {
+                                        _isAccountFound = false;
+                                        break;
+                                    }
+                                }
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Не корректный номер счёта");
+                            }
+
+                        } while (_isAccountFound);
+
+
+                        do
+                        {
+                            Console.WriteLine("Выберете сумму списания денег:");
+
+                            try
+                            {
+                                _take = Convert.ToDecimal(Console.ReadLine());
+                                _isTake = false;
+
+                            }
+                            catch (Exception)
+                            {
+
+                                Console.WriteLine("Некорректная сумма списания!");
+
+                            }
+
+                        } while (_isTake);
+
+
+                        account3.MoneyTransfer(listAccount[_fromTheAccount-1], _take);
+                        break;
+
+
+                    case "4":
+
+                        Console.WriteLine("Выбран текущий счёт № 4.");
+                        do
+                        {
+                            Console.WriteLine("Выберете счёт с которого будут переведены деньги:");
+
+                            try
+                            {
+                                _fromTheAccount = Convert.ToInt32(Console.ReadLine());
+                                foreach (var item in listAccount)
+                                {
+                                    if (item.Number == _fromTheAccount)
+                                    {
+                                        _isAccountFound = false;
+                                        break;
+                                    }
+                                }
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Не корректный номер счёта");
+                            }
+
+                        } while (_isAccountFound);
+
+
+                        do
+                        {
+                            Console.WriteLine("Выберете сумму списания денег:");
+
+                            try
+                            {
+                                _take = Convert.ToDecimal(Console.ReadLine());
+                                _isTake = false;
+
+                            }
+                            catch (Exception)
+                            {
+
+                                Console.WriteLine("Некорректная сумма списания!");
+
+                            }
+
+                        } while (_isTake);
+
+
+                        account4.MoneyTransfer(listAccount[_fromTheAccount-1], _take);
+                        break;
+
                     default:
                         break;
                 }
-
-
             } while (exit!="q");
 
 
