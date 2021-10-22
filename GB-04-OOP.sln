@@ -22,9 +22,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB-04-03BankAccount", "GB-0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB-04-03BankAccount01", "GB-04-03BankAccount01\GB-04-03BankAccount01.csproj", "{7275E105-E177-4B37-937D-302D34E461C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GB-04-03BankAccount02", "GB-04-03BankAccount02\GB-04-03BankAccount02.csproj", "{9239F94C-A214-4028-B392-8B4BDB8D3545}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB-04-03BankAccount02", "GB-04-03BankAccount02\GB-04-03BankAccount02.csproj", "{9239F94C-A214-4028-B392-8B4BDB8D3545}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GB-04-03String03", "GB-04-03String03\GB-04-03String03.csproj", "{95D5521C-0B25-4EE0-993C-39A14BB8E876}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB-04-03String03", "GB-04-03String03\GB-04-03String03.csproj", "{95D5521C-0B25-4EE0-993C-39A14BB8E876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GB-04-04Building01", "GB-04-04Building01\GB-04-04Building01.csproj", "{82532EC3-8F96-49D5-A5A8-CDD27BC09691}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{95D5521C-0B25-4EE0-993C-39A14BB8E876}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95D5521C-0B25-4EE0-993C-39A14BB8E876}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95D5521C-0B25-4EE0-993C-39A14BB8E876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82532EC3-8F96-49D5-A5A8-CDD27BC09691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82532EC3-8F96-49D5-A5A8-CDD27BC09691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82532EC3-8F96-49D5-A5A8-CDD27BC09691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82532EC3-8F96-49D5-A5A8-CDD27BC09691}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
