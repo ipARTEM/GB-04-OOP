@@ -10,7 +10,7 @@ namespace GB_04_03BankAccount01
     {
         static int counter = 1;
 
-        int _number;
+        private int _number;
 
         public int Number
         {
@@ -65,6 +65,7 @@ namespace GB_04_03BankAccount01
 
         }
 
+
         public Account()
         {
             _number = Increase();
@@ -74,13 +75,11 @@ namespace GB_04_03BankAccount01
         {
             _balance = balance;
             _number = Increase();
-
         }
         public Account(TypeOfBankAccount typeAccount)
         {
             _typeAccount = typeAccount;
             _number = Increase();
-
         }
 
         public Account(decimal balance, TypeOfBankAccount typeAccount)
@@ -88,13 +87,8 @@ namespace GB_04_03BankAccount01
             _balance = balance;
             _typeAccount = typeAccount;
             _number = Increase();
-
         }
 
-        int Increase()
-        {
-            return counter++;
-        }
 
         public void FullInfo()
         {
@@ -112,9 +106,7 @@ namespace GB_04_03BankAccount01
             {
                 _balance = _balance + put;
                 Console.WriteLine($"Счёт пополнен на: {put}");
-
             }
-
         }
 
         /// <summary>
@@ -133,7 +125,9 @@ namespace GB_04_03BankAccount01
                     Console.WriteLine($"Со счёта снята на: {take}");
                 }
                 else
+                {
                     Console.WriteLine($"На счету недостаточно средств. Баланс: {_balance}; Сумма для снятия: {take};");
+                }    
 
             }
         }
@@ -151,13 +145,15 @@ namespace GB_04_03BankAccount01
                 moneyFrom._balance = moneyFrom._balance - take;
                 Console.WriteLine($"На счёт: {_number}; Зачислена сумма {take}; Остаток: {_balance};");
                 Console.WriteLine($"Со счёта: {moneyFrom._number}; Списана сумма: {take}; Остаток: {moneyFrom._balance};");
-                
             }
             else
             {
                 Console.WriteLine($"Недостаточно средств на счёте: {moneyFrom._number}, для списания суммы: {take}");
-                    
             }
+        }
+        private int Increase()
+        {
+            return counter++;
         }
     }
 }
