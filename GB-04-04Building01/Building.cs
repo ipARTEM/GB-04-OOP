@@ -29,7 +29,7 @@ namespace GB_04_04Building01
         uint _flat;
 
         /// <summary>
-        /// Количества подъездов
+        /// Количество подъездов
         /// </summary>
         uint _entrance;
 
