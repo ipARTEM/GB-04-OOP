@@ -9,59 +9,67 @@ namespace GB_04_04Building01
     public class Building
     {
         /// <summary>
+        /// Счетчик уникальных номеров зданий
+        /// </summary>
+        private static uint _counter = 1;
+
+        /// <summary>
         /// Уникальный номер здания
         /// </summary>
-        uint _idBuilding;
+        private uint _idBuilding;
 
         /// <summary>
         /// Высота
         /// </summary>
-        float _height;
+        private float _height;
 
         /// <summary>
         /// Этажность
         /// </summary>
-        short _floor;
+        private short _floor;
 
         /// <summary>
         /// Количество квартир
         /// </summary>
-        uint _flat;
+        private uint _flat;
 
         /// <summary>
         /// Количество подъездов
         /// </summary>
-        uint _entrance;
+        private uint _entrance;
 
-        static uint counter = 1;
+
 
         public void Add( float height, short floor, uint flat, uint entrance)
         {
-            _idBuilding = CounterPlus(counter);
-            
+            _idBuilding = CounterPlus(_counter);
+
             _height = height;
+
             _floor = floor;
+
             _flat = flat;
+
             _entrance = entrance;
         }
         public void Add(uint apartmentsOnTheFloor, short floor, uint entrance)
         {
-            _idBuilding = counter++;
+            _idBuilding = _counter++;
 
             _floor = floor;
+
             _entrance = entrance;
 
             _flat = apartmentsOnTheFloor *(uint)_floor * _entrance;
 
             BuildingHeight(_floor);
-
-
         }
         public void BuildingHeight(short floor)                                    
         {
             float basement = 2.1F;
-            float attic = 4.2F;                                                
-                                                                 
+
+            float attic = 4.2F; 
+            
             _floor = floor;
 
             _height = (floor * 3) + basement + attic;
@@ -69,7 +77,6 @@ namespace GB_04_04Building01
 
         public void Print()                                                                 
         {
-
             Console.WriteLine($"Уникальный номер здания: {_idBuilding}; высота: {_height}; этажность: {_floor}; количество квартир: {_flat}; количества подъездов: {_entrance};");
         }
 
@@ -77,11 +84,5 @@ namespace GB_04_04Building01
         {
             return counter++;
         }
-
-
-
-
-
-
     }
 }
