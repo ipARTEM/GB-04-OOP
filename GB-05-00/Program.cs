@@ -40,12 +40,14 @@ namespace GB_05_00
             Console.WriteLine("Rectangle Constructor Called");
         }
 
-        public Rectangle(int size)
+        public Rectangle(int size) : this(size, size)
         {
             if (size <= 0) throw new ArgumentException("height");
             _height = _width = size;
             Console.WriteLine("Square Constructor Called");
         }
+
+  
 
 
 
