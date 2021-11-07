@@ -10,7 +10,11 @@ namespace GB_05_000
     {
         private int _x, _y;
 
-        public Vector(int x, int y) { _x = x; _y = y; }
+        public Vector(int x, int y)
+        { 
+            _x = x; 
+            _y = y; 
+        }
 
         public int X
         {
@@ -72,5 +76,44 @@ namespace GB_05_000
         {
             return (v1.X != v2.X || v1.Y != v2.Y);
         }
+        public double Length
+        {
+            get { return Math.Sqrt(_x * _x + _y * _y); }
+        }
+
+        public static bool operator >(Vector v1, Vector v2)
+        {
+            return (v1.Length > v2.Length);
+        }
+
+        public static bool operator <(Vector v1, Vector v2)
+        {
+            return (v1.Length < v2.Length);
+        }
+
+        public static bool operator >=(Vector v1, Vector v2)
+        {
+            return (v1.Length >= v2.Length);
+        }
+
+        public static bool operator <=(Vector v1, Vector v2)
+        {
+            return (v1.Length <= v2.Length);
+        }
+
+        public static implicit operator double(Vector v)
+        {
+            return v.Length;
+        }
+
+        public static explicit operator float(Vector v)
+        {
+            return (float)v.Length;
+        }
+
+        
+        
+
+
     }
 }

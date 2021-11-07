@@ -23,9 +23,9 @@ namespace GB_05_000
             Vector v6 = new Vector(8, 88);
 
             v6++;
-            Console.WriteLine("({0},{1})", v6.X, v6.Y);    
+            Console.WriteLine("({0},{1})", v6.X, v6.Y);
 
-            v6--; 
+            v6--;
             Console.WriteLine("({0},{1})", v6.X, v6.Y);
 
             Vector v7 = new Vector(7, 77);
@@ -42,6 +42,29 @@ namespace GB_05_000
 
             Console.WriteLine(v12.Equals(v11));           //  "False"
             Console.WriteLine(v13.Equals(v12));           //  "True"
+
+            Console.WriteLine("*******************************************");
+            Vector v21 = new Vector(3, 4);
+            Vector v22 = new Vector(4, 3);
+            Vector v23 = new Vector(3, 5);
+
+            Console.WriteLine(v21 > v22);                 //  "False"
+            Console.WriteLine(v21 < v22);                 //  "False"
+            Console.WriteLine(v21 >= v22);                //  "True"
+            Console.WriteLine(v21 <= v22);                //  "True"
+            Console.WriteLine(v21 > v23);                 //  "False"
+            Console.WriteLine(v21 < v23);                 //  "True"
+            Console.WriteLine(v21 >= v23);                //  "False"
+            Console.WriteLine(v21 <= v23);                //  "True"
+
+            Console.WriteLine("*******************************************");
+
+            uint integer = 100;
+            long longInteger;
+            longInteger = integer; // Неявное приведение
+            integer = (uint)longInteger;  // Явное приведение
+
+
 
         }
     }
