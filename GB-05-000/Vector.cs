@@ -110,10 +110,5 @@ namespace GB_05_000
         {
             return (float)v.Length;
         }
-
-        
-        
-
-
     }
 }

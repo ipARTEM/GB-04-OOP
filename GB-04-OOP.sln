@@ -22,7 +22,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB-05-01", "GB-05-01\GB-05-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB-05-00", "GB-05-00\GB-05-00.csproj", "{F33D9C47-27DE-4266-B20D-FF7FF5A73672}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GB-05-000", "GB-05-000\GB-05-000.csproj", "{72F8892F-5DFE-4B95-8720-8E66722D28FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB-05-000", "GB-05-000\GB-05-000.csproj", "{72F8892F-5DFE-4B95-8720-8E66722D28FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GB-05-02ComplexNumbers", "GB-05-02ComplexNumbers\GB-05-02ComplexNumbers.csproj", "{15A2A03E-6354-482B-8D11-5FAC2AE23EBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{72F8892F-5DFE-4B95-8720-8E66722D28FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72F8892F-5DFE-4B95-8720-8E66722D28FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72F8892F-5DFE-4B95-8720-8E66722D28FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A2A03E-6354-482B-8D11-5FAC2AE23EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A2A03E-6354-482B-8D11-5FAC2AE23EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A2A03E-6354-482B-8D11-5FAC2AE23EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A2A03E-6354-482B-8D11-5FAC2AE23EBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
