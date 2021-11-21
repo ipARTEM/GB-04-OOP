@@ -18,7 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB-04-02BankAccount03", "GB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB-04-02BankAccount04", "GB-04-02BankAccount04\GB-04-02BankAccount04.csproj", "{98D0A9E5-FD08-4502-8F03-BD9A0755AE23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GB-04-06", "GB-04-06\GB-04-06.csproj", "{2FCE48B7-6716-41A5-A304-BB9B2946D0A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GB-04-06Task6Part1", "GB-04-06\GB-04-06Task6Part1.csproj", "{2FCE48B7-6716-41A5-A304-BB9B2946D0A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GB-04-06Task6Test", "GB-04-06Task6Test\GB-04-06Task6Test.csproj", "{0921D427-50AB-4CE5-AC82-7F7022F89177}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{2FCE48B7-6716-41A5-A304-BB9B2946D0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FCE48B7-6716-41A5-A304-BB9B2946D0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FCE48B7-6716-41A5-A304-BB9B2946D0A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0921D427-50AB-4CE5-AC82-7F7022F89177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0921D427-50AB-4CE5-AC82-7F7022F89177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0921D427-50AB-4CE5-AC82-7F7022F89177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0921D427-50AB-4CE5-AC82-7F7022F89177}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
