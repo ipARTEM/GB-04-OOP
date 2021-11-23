@@ -6,17 +6,6 @@ using System.Threading.Tasks;
 
 namespace GB_04_07ICoderInterfase
 {
-    public interface ICoder
-    {
-     
-
-        string Encode(string enc);
-
-        string Decode(string dec);
-
-    }
-
-
     public class ACoder : ICoder
     {
         char[] abc = {'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И',
@@ -26,11 +15,10 @@ namespace GB_04_07ICoderInterfase
 
         StringBuilder sb = new StringBuilder();
         int num;
+        const int numMin = 1;
         const int numMax = 33;
         bool isUpper = true;
         char up;
-
-
 
         public string Encode(string strChar)
         {
@@ -82,9 +70,59 @@ namespace GB_04_07ICoderInterfase
             return sb.ToString();
         }
 
-        public string Decode (string enc)
+        public void Clear()
         {
-            throw new NotImplementedException();
+            sb.Clear();
+        }
+
+        public string Decode (string strChar)
+        {
+            foreach (var i in strChar)
+            {
+                num = 0;
+                isUpper = char.IsUpper(i);
+                if (!isUpper)
+                {
+                    up = char.ToUpper(i);
+                }
+                else
+                {
+                    up = i;
+                }
+
+                foreach (var iAbc in abc)
+                {
+                    num++;
+                    if (up == iAbc)
+                    {
+                        if (num == numMin)
+                        {
+                            if (isUpper)
+                            {
+                                sb.Append(abc[32]);
+                            }
+                            else
+                            {
+                                up = char.ToLower(abc[32]);
+                                sb.Append(up);
+                            }
+                        }
+                        else
+                        {
+                            if (isUpper)
+                            {
+                                sb.Append(abc[num-2]);
+                            }
+                            else
+                            {
+                                up = char.ToLower(abc[num-2]);
+                                sb.Append(up);
+                            }
+                        }
+                    }
+                }
+            }
+            return sb.ToString();
         }
     }
 }

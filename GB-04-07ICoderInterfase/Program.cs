@@ -6,9 +6,15 @@ namespace GB_04_07ICoderInterfase
     {
         static void Main(string[] args)
         {
-            ACoder coder = new ACoder();
+            ACoder aCoder = new ();
+            Console.WriteLine(aCoder.Encode("АБвя"));
+            aCoder.Clear();
+            Console.WriteLine(aCoder.Decode("БВга"));
 
-            Console.WriteLine(coder.Encode("ыва")); ;
+            BCoder bCoder=new ();
+            Console.WriteLine(bCoder.Encode("АБвя"));
+            bCoder.Clear();
+            Console.WriteLine(bCoder.Decode("ЯЮэа"));
         }
     }
 }
